@@ -22,7 +22,7 @@ export default function TextForm(props) {
     }
 
     const clear = () => {
-        let newText = " "
+        let newText = ""
         editText(newText);
         props.showAlert("Input is now clear" , "Success")
     }
@@ -38,7 +38,7 @@ export default function TextForm(props) {
         <>
             <div className="mb-3 container">
                 <label htmlFor="exampleFormControlTextarea1" className="form-label" style={props.newStyle}><h1>Enter Your Text Below :</h1></label>
-                <textarea id="myBox" style={{backgroundColor: props.cc==='light'?'white':'grey'}} className="form-control" value={text}  onChange={handleChange} rows="7" placeholder='Enter Text Here'></textarea>
+                <textarea id="myBox" style={{backgroundColor: props.cc==='light'?'white':'black' , color: props.cc==='light'?'black':'white'}} className="form-control" value={text}  onChange={handleChange} rows="7" placeholder='Enter Text Here'></textarea>
                 <button style={{margin:"9px"}} onClick={upper} type="button" className="btn btn-primary mx-1 mb-9">Upper Case</button>
                 <button onClick={lower} type="button" className="btn btn-success mx-1 mb-9">Lower Case</button>
                 <button onClick={copy} type="button" className="btn btn-danger mx-1 mb-9">Copy text</button>
